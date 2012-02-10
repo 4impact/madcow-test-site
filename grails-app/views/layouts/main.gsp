@@ -2,7 +2,7 @@
 <head>
     <title><g:layoutTitle default="Address Book" /></title>
     <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
-    <link rel="stylesheet" href="${resource(dir:'css',file:'madcow.css')}" />
+    <%--<link rel="stylesheet" href="${resource(dir:'css',file:'madcow.css')}" />--%>
     <link rel="shortcut icon" href="${resource(dir:'images',file:'Address-Book.ico')}" type="image/x-icon" />
     <g:layoutHead />
     <g:javascript library="application" />
@@ -43,7 +43,7 @@
 
 <g:layoutBody />
 <r:layoutResources/>
-<div id="footer" style="border: 0px; margin-top: 0px; margin-right: 10px;">
+<div id="footer" style="border: 0px; margin-top: 10px; margin-right: 10px; float: right">
     <a href="http://4impact.com.au">
         <img src="${resource(dir:'images',file:'4impact.jpg')}" alt="Madcow" title="Madcow" border="0" />
     </a>

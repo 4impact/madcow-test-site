@@ -9,9 +9,11 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
+    <div class="nav" role="navigation">
+        <ul>
+            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
+            <li><span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span></li>
+        </ul>
         </div>
         <div class="body">
             <h2><g:message code="default.create.label" args="[entityName]" /></h2>
@@ -48,10 +50,13 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="state"><g:message code="postCodeReference.state.label" default="State" /></label>
+                                    <label for="state.id"><g:message code="postCodeReference.state.label" default="State" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: postCodeReferenceInstance, field: 'state', 'errors')}">
-                                    <g:select name="state.id" from="${au.com.ts4impact.madcow.test.site.domain.State.list()}" optionKey="id" value="${postCodeReferenceInstance?.state?.id}"  />
+                                    <g:select name="state.id"
+                                              from="${au.com.ts4impact.madcow.test.site.domain.State.list() }"
+                                              optionKey="id"
+                                              value="${postCodeReferenceInstance?.state?.id}"  />
                                 </td>
                             </tr>
                         

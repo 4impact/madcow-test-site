@@ -11,9 +11,11 @@
         <title><g:message code="default.search.label" args="[entityName]" /></title>                
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
+        <div class="nav" role="navigation">
+            <ul>
+            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span> </li>
+            <li><span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span></li>
+            </ul>
         </div>               
         <div class="body">
             <h2><g:message code="default.search.label" args="[entityName]" /></h2>
@@ -26,6 +28,7 @@
             </div>
             </g:hasErrors>
             <g:form action="showSearchResults" method="post" >
+                <fieldset class="form">
                 <div class="dialog">
                     <table>
                         <tbody>
@@ -74,9 +77,10 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="buttons">
-                    <span class="button"><input class="list" type="submit" value="${message(code: 'default.button.search.label', default: 'Search')}" /></span>
-                </div>                
+                </fieldset>
+            <fieldset class="buttons">
+                <input class="list" type="submit" value="${message(code: 'default.button.search.label', default: 'Search')}" />
+            </fieldset>
             </g:form>
         </div>
     </body>

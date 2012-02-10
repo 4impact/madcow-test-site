@@ -72,17 +72,16 @@
 		    }
 
 
-
-
-		
 		</g:javascript>
         
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link></span>
-        </div>
+    <div class="nav" role="navigation">
+        <ul>
+            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
+            <li><span class="menuButton"><g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link></span></li>
+        </ul>
+    </div>
         <div class="body">
             <h2><g:message code="default.create.label" args="[entityName]" /></h2>
             <g:if test="${flash.message}">
@@ -118,7 +117,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="postCode"><g:message code="address.postCode.label" default="Post Code" /></label>
+                                    <label for="postCodeEntry"><g:message code="address.postCode.label" default="Post Code" /></label>
                                 </td>
                                 <td valign="top" class="value">                                    
                                     <g:textField name="postCodeEntry"                                    
@@ -132,7 +131,7 @@
                             
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="suburb"><g:message code="address.suburb.label" default="Suburb" /></label>
+                                    <label for="suburbOptions"><g:message code="address.suburb.label" default="Suburb" /></label>
                                 </td>
                                 <td id="suburbOptions"></td>                                
                             </tr>

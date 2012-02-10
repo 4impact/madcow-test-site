@@ -61,10 +61,9 @@
     <orderEntry type="library" name="com.springsource.sts.grails.core.CLASSPATH_CONTAINER" level="application" />
     <orderEntry type="library" name="grails-2.0.0" level="application" />
     <orderEntry type="module-library" exported="">
-      <library name="Grails User Library (madcow-test-site-2.0)">
+      <library name="Grails User Library (madcow-test-site-2)">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.16.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/antlr/antlr/jars/antlr-2.7.6.jar!/" />
         </CLASSES>
         <JAVADOC />

@@ -3,6 +3,7 @@ import au.com.ts4impact.madcow.test.site.domain.State
 class BootStrap {
 
     def init = { servletContext ->
+
         if (!State.count()) {
             createData()
         }
@@ -12,8 +13,7 @@ class BootStrap {
     }
 
     private void createData() {
-
-
+        
         [1: [ shortName: 'NT',
              longName:  'Northern Territory'],
         2: [ shortName: 'NSW',
@@ -31,9 +31,11 @@ class BootStrap {
         8: [ shortName: 'TAS',
              longName:  'Tasmania']
         ].each{stateId, dataMap ->
+            
             def state = new State(  id: stateId,
                                     shortName: dataMap.shortName,
-                                    longName : dataMap.fullName).save();
+                                    longName : dataMap.longName).save(flush: true, failOnError:true);
         }
+
     }
 }
