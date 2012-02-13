@@ -7,7 +7,9 @@ This is a Grails 2.0 Application for the 4impact milk-parlour application to uti
 It is currently being upgraded to support Grails 2.0 utilizing Twitter Bootstrap, jQuery and others.
 
 To run simply type:
-    ```$ grails run-app```
+   
+    $ grails run-app
+    
 the in-memory database will be automatically pre populated and the application will start up.
 
 
