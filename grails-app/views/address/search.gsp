@@ -65,7 +65,7 @@
                                 </td>
                                 <td valign="top" class="value">
                                     <g:select                                      
-                                        from="${State.list().sort() {state -> state.name} }" 
+                                        from="${State.list().sort() {state -> state.name} }"
                                         value="${state}" 
                                         name="state"
                                         optionKey="id"

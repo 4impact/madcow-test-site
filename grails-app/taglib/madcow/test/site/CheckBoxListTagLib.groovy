@@ -15,7 +15,7 @@ public class CheckBoxListTagLib {
 
     // Checkbox list that can be used as a more user-friendly alternative to
     // a multiselect list box
-    def checkBoxList = {attrs, body ->
+        def checkBoxList = {attrs, body ->
 
         def from = attrs.from
         def value = attrs.value

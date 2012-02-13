@@ -8,7 +8,12 @@ class State {
     String shortName
     String longName
 
-    String toString(){
+    def getName(){
+        longName
+    }
+
+    String toString()
+    {
         return longName;
     }
 }
