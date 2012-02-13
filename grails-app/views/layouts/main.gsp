@@ -7,6 +7,7 @@
     <g:layoutHead />
     <g:javascript library="application" />
     <g:javascript library="prototype" />
+    <g:javascript library="jquery" />
     <g:javascript>
         function showSpinner(visible) {
             $('spinner').style.display = visible ? "inline" : "none";

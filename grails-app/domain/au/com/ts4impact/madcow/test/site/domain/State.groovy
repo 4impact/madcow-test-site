@@ -8,7 +8,7 @@ class State {
     String shortName
     String longName
 
-    def getName(){
+    def getName() {
         longName
     }
 

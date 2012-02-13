@@ -56,7 +56,8 @@
                                     <g:select name="state.id"
                                               from="${au.com.ts4impact.madcow.test.site.domain.State.list() }"
                                               optionKey="id"
-                                              value="${postCodeReferenceInstance?.state?.id}"  />
+                                              value="${postCodeReferenceInstance?.state?.id}"
+                                              noSelection="${['':'Select One...']}" />
                                 </td>
                             </tr>
                         
