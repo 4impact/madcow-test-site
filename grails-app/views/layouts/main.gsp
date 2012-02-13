@@ -6,8 +6,8 @@
     <link rel="shortcut icon" href="${resource(dir:'images',file:'Address-Book.ico')}" type="image/x-icon" />
     <g:layoutHead />
     <g:javascript library="application" />
-    <%--<g:javascript library="prototype" />
-    <r:require modules="bootstrap"/>--%>
+    <g:javascript library="prototype" />
+    <%--<r:require modules="bootstrap"/>--%>
     <g:javascript library="jquery" />
     <g:javascript>
         function showSpinner(visible) {
