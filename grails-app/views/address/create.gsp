@@ -5,12 +5,12 @@
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'address.label', default: 'Address')}" />
         <title><g:message code="default.create.label" args="[entityName]" /></title>
-        
+
         <g:javascript library="application" />
 		<g:javascript>
 		
 		    function updateSuburb(e) { // The response comes back as a bunch-o-JSON
-		    
+		        console.log(e);
 		        var postCodes = eval("(" + e.responseText + ")") // evaluate JSON		    
 		    
 		        // remove existing radio buttons
