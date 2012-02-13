@@ -56,7 +56,7 @@ class BootStrap {
     private void runStartUpSql(def servletContext) {
     
         println("Running Database preload start up SQL script");
-        String sqlFilePath = ApplicationHolder.application.parentContext.servletContext.getRealPath("../grails-app/conf/startUp.sql")
+        String sqlFilePath = ApplicationHolder.application.parentContext.servletContext.getRealPath("/conf/startUp.sql")
         def sqlStringLoop = new File(sqlFilePath).readLines()
         Sql sql = Sql.newInstance(CH.config.dataSource.url, CH.config.dataSource.username,
                 CH.config.dataSource.password, CH.config.dataSource.driverClassName)
