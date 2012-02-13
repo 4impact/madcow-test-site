@@ -27,7 +27,7 @@
                 <g:renderErrors bean="${companyInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="showSearchResults" method="post" >
+            <g:form action="showSearchResults" method="post" class="form-horizontal">
                 <fieldset class="form">
                 <div class="dialog">
                     <table>
@@ -77,9 +77,10 @@
                         </tbody>
                     </table>
                 </div>
-                </fieldset>
-            <fieldset class="buttons">
-                <input class="list" type="submit" value="${message(code: 'default.button.search.label', default: 'Search')}" />
+            <div class="form-actions">
+                <input class="btn btn-primary" type="submit" value="${message(code: 'default.button.search.label', default: 'Search')}" />
+                <button type="reset" class="btn">Cancel</button>
+            </div>
             </fieldset>
             </g:form>
         </div>

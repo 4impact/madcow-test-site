@@ -20,7 +20,7 @@
             <div class="message">${flash.message}</div>
             </g:if>
             <div class="list">
-                <table id="searchResults" >
+                <table id="searchResults" class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <g:sortableColumn property="id" title="Id" params="${params}"/>                    	    

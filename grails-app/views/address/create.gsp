@@ -38,10 +38,10 @@
 	                    objLabel.appendChild(objRadItem);
 	                    objLabel.appendChild(objTextNode);
 	
-	                    var objBreak = document.createElement("br");
+	                    //var objBreak = document.createElement("br");
 	
 	                    radioButtonLocation.appendChild(objLabel);
-	                    radioButtonLocation.appendChild(objBreak);
+	                    //radioButtonLocation.appendChild(objBreak);
 	        		}
                 }
 		    }
@@ -92,7 +92,8 @@
                 <g:renderErrors bean="${addressInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="save" >
+            <g:form action="save" class="form-horizontal">
+                <fieldset>
                 <div class="dialog">
                     <table>
                         <tbody>
@@ -147,7 +148,7 @@
                         </tbody>
                         <tr class="prop">
                             <td valign="top" class="name">
-                                <g:submitToRemote
+                                <g:submitToRemote class="btn btn-info"
                                     name="checkForDuplicates"
                                     value="${message(code: 'address.create.button.CheckForDuplicates', default: 'Check For Duplicates')}"
                                     controller="address"
@@ -160,9 +161,12 @@
                         </tr>
                     </table>
                 </div>
-                <div class="buttons">
-                    <span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>
+
+                <div class="form-actions">
+                    <g:submitButton class="btn btn-primary" name="create" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                    <g:link controller="Address" action="create" class="btn">Cancel</g:link>
                 </div>
+                </fieldset>
             </g:form>
         </div>
     </body>
