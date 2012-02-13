@@ -10,7 +10,7 @@
 		<g:javascript>
 		
 		    function updateSuburb(e) { // The response comes back as a bunch-o-JSON
-		        console.log(e);
+		        //console.log(e);
 		        var postCodes = eval("(" + e.responseText + ")") // evaluate JSON		    
 		    
 		        // remove existing radio buttons
@@ -125,7 +125,7 @@
                                             controller:'address', 
                                             action:'ajaxGetSuburbs',
                                             params:'\'id=\' + escape(this.value)',
-                                            onComplete:'updateSuburb(e)')}" />
+                                            onComplete:'updateSuburb(XMLHttpRequest);')}" />
                                 </td>
                             </tr>
                             
@@ -152,7 +152,7 @@
                                     value="${message(code: 'address.create.button.CheckForDuplicates', default: 'Check For Duplicates')}"
                                     controller="address"
                                     action="ajaxCheckForDuplicates"
-                                    onComplete="showNumberOfDuplicates(e)"/>
+                                    onComplete="showNumberOfDuplicates(XMLHttpRequest)"/>
                             </td>
                             <td valign="top">
                                 <div valign="top" class="warning" id="duplicatesMessage"></div>

@@ -6,7 +6,8 @@
     <link rel="shortcut icon" href="${resource(dir:'images',file:'Address-Book.ico')}" type="image/x-icon" />
     <g:layoutHead />
     <g:javascript library="application" />
-    <g:javascript library="prototype" />
+    <%--<g:javascript library="prototype" />
+    <r:require modules="bootstrap"/>--%>
     <g:javascript library="jquery" />
     <g:javascript>
         function showSpinner(visible) {
@@ -41,9 +42,9 @@
         </td>
     </tr>
 </table>
-
-<g:layoutBody />
 <r:layoutResources/>
+<g:layoutBody />
+
 <div id="footer" style="border: 0px; margin-top: 10px; margin-right: 10px; float: right">
     <a href="http://4impact.com.au">
         <img src="${resource(dir:'images',file:'4impact.jpg')}" alt="Madcow" title="Madcow" border="0" />

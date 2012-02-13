@@ -16,8 +16,8 @@ class BootStrap {
                 //if no state data then pre populate DB
                 if (!State.count()) {
                     createData();
-                    
                 }
+                //if no postcode data then pre populate it too
                 if (!PostCodeReference.count()){
                     runStartUpSql(servletContext);
                 }
@@ -27,6 +27,14 @@ class BootStrap {
                 break
             case "production":
                 println "#### PRODUCTION Mode (Start Up) ####"
+                //if no state data then pre populate DB
+                if (!State.count()) {
+                    createData();
+                }
+                //if no postcode data then pre populate it too
+                if (!PostCodeReference.count()){
+                    runStartUpSql(servletContext);
+                }
                 break
         }
     }

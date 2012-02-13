@@ -1,8 +1,8 @@
-Madcow Address Book Test Application v2
+Address Book Test Application v2
 ================================================================
 
 ##DESCRIPTION
-This is a Grails 2.0 Application for the Madcow Test Tool v2.0 to utilise.
+This is a Grails 2.0 Application for the 4impact milk-parlour application to utilise.
 
 It is currently being upgraded to support Grails 2.0 utilizing Twitter Bootstrap, jQuery and others.
 
