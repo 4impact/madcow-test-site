@@ -107,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.2760736">
+            <state line="12" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.2760736">
               <folding />
             </state>
           </provider>
@@ -158,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/state/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/postCodeReference/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/postCodeReference/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/address/edit.gsp" />
@@ -174,6 +173,7 @@
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/address/create.gsp" />
         <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -650,9 +650,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.2760736">
+        <state line="12" column="0" selection-start="440" selection-end="440" vertical-scroll-proportion="0.2760736">
           <folding />
         </state>
       </provider>
