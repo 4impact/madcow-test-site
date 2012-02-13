@@ -47,7 +47,7 @@
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${postCodeReferenceInstanceTotal}" />
+				<g:paginate total="${postCodeReferenceInstanceTotal}" max="50" />
 			</div>
 		</div>
 	</body>

@@ -9,7 +9,8 @@ class StateController {
     }
 
     def list = {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        int pageSize = grailsApplication.config.grails.scaffolds.pageSize ?: 10
+        params.max = Math.min(params.max ? params.int('max') : pageSize, 100)
         [stateInstanceList: State.list(params), stateInstanceTotal: State.count()]
     }
 

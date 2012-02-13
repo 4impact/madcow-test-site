@@ -70,6 +70,7 @@ environments {
     }
 }
 
+grails.scaffolds.pageSize = 100;
 grails.plugins.twitterbootstrap.fixtaglib = true
 
 // log4j configuration
