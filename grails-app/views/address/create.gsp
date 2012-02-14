@@ -76,23 +76,29 @@
         
     </head>
     <body>
+    <%--
     <div class="nav" role="navigation">
         <ul>
             <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
             <li><span class="menuButton"><g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link></span></li>
         </ul>
-    </div>
+    </div>--%>
         <div class="body">
-            <h2><g:message code="default.create.label" args="[entityName]" /></h2>
+            <ul class="breadcrumb">
+                <li>
+                    <g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link>
+                </li>
+            </ul>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+            <div class="alert alert-info">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${addressInstance}">
-            <div class="errors">
+            <div class="alert alert-error">
                 <g:renderErrors bean="${addressInstance}" as="list" />
             </div>
             </g:hasErrors>
             <g:form action="save" class="form-horizontal">
+                <legend><g:message code="default.create.label" args="[entityName]" /></legend>
                 <fieldset>
                 <div class="dialog">
                     <table>
@@ -100,7 +106,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="addressLine1"><g:message code="address.addressLine1.label" default="Address Line1" /></label>
+                                    <label for="addressLine1"><g:message code="address.addressLine1.label" default="Address Line 1" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: addressInstance, field: 'addressLine1', 'errors')}">
                                     <g:textField name="addressLine1" value="${addressInstance?.addressLine1}" />
@@ -109,7 +115,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="addressLine2"><g:message code="address.addressLine2.label" default="Address Line2" /></label>
+                                    <label for="addressLine2"><g:message code="address.addressLine2.label" default="Address Line 2" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: addressInstance, field: 'addressLine2', 'errors')}">
                                     <g:textField name="addressLine2" value="${addressInstance?.addressLine2}" />
@@ -126,7 +132,8 @@
                                             controller:'address', 
                                             action:'ajaxGetSuburbs',
                                             params:'\'id=\' + escape(this.value)',
-                                            onComplete:'updateSuburb(XMLHttpRequest);')}" />
+                                            onLoading:'showSpinner(true);',
+                                            onComplete:'updateSuburb(XMLHttpRequest);showSpinner(false);')}" />
                                 </td>
                             </tr>
                             
@@ -134,7 +141,7 @@
                                 <td valign="top" class="name">
                                     <label for="suburbOptions"><g:message code="address.suburb.label" default="Suburb" /></label>
                                 </td>
-                                <td id="suburbOptions"></td>                                
+                                <td id="suburbOptions"></td>
                             </tr>
 
                             <tr class="prop">
@@ -153,9 +160,13 @@
                                     value="${message(code: 'address.create.button.CheckForDuplicates', default: 'Check For Duplicates')}"
                                     controller="address"
                                     action="ajaxCheckForDuplicates"
-                                    onComplete="showNumberOfDuplicates(XMLHttpRequest)"/>
+                                    onLoading="showSpinner(true);"
+                                    onComplete="showNumberOfDuplicates(XMLHttpRequest); showSpinner(false);"/>
                             </td>
                             <td valign="top">
+                                <div class="spinner" id="spinner" style="display:none;">
+                                    <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
+                                </div>
                                 <div valign="top" class="warning" id="duplicatesMessage"></div>
                             </td>
                         </tr>

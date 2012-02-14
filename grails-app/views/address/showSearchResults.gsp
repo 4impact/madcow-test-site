@@ -8,22 +8,26 @@
         <title><g:message code="default.search.results.label" args="[entityName]" /></title>        
     </head>
     <body>
-    <div class="nav" role="navigation">
-        <ul>
-            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
-            <li><span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span></li>
-        </ul>
-        </div>        
         <div class="body">
-            <h2><g:message code="default.search.results.label" args="[entityName]" /></h2>
+            <ul class="breadcrumb">
+                <li>
+                    <g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link><span class="divider">|</span>
+                </li>
+                <li>
+                    <g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+                </li>
+            </ul>
+            <form>
+            <legend><g:message code="default.search.results.label" args="[entityName]" /></legend>
+            </form>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+                <div class="alert alert-info">${flash.message}</div>
             </g:if>
             <div class="list">
                 <table id="searchResults" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <g:sortableColumn property="id" title="Id" params="${params}"/>                    	    
+                            <g:sortableColumn property="id" title="ID" params="${params}"/>
                    	        <g:sortableColumn property="addressLine1" title="Address Line 1" params="${params}"/>                        
                             <g:sortableColumn property="addressLine2" title="Address Line 2" params="${params}"/>                        
                    	        <g:sortableColumn property="postCode.locality" title="Suburb" params="${params}"/>

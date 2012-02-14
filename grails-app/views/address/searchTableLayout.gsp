@@ -18,10 +18,10 @@
         <div class="body">
             <h2><g:message code="default.search.label" args="[entityName]" /></h2>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+            <div class="alert alert-info">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${companyInstance}">
-            <div class="errors">
+            <div class="alert alert-error">
                 <g:renderErrors bean="${companyInstance}" as="list" />
             </div>
             </g:hasErrors>

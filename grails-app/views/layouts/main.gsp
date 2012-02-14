@@ -8,41 +8,42 @@
     <g:javascript library="application" />
     <g:javascript library="prototype" />
     <r:require modules="bootstrap"/>
+    <r:require modules="bootstrap-responsive-css"/>
     <g:javascript library="jquery" />
+    <style type="text/css">
+
+        .body {
+            padding-top: 10px;
+        }
+
+    </style>
     <g:javascript>
         function showSpinner(visible) {
             $('spinner').style.display = visible ? "inline" : "none";
         }
-
-        Ajax.Responders.register({
-            onLoading: function() {
-                showSpinner(true);
-            },
-            onComplete: function() {
-                if(!Ajax.activeRequestCount) showSpinner(false);
-            }
-        });
     </g:javascript>
     <r:layoutResources/>
 </head>
 <body style="padding-top: 40px;">
 <g:render template="/layouts/navigation"/>
+<%--
 <table class="noborder">
     <tr>
-        <%--<td>
+        <td>
             <div id="addressBookLogo">
                 <a name="madcowlogo" href="http://projectmadcow.com">
                     <img src="${resource(dir:'images',file:'madcow.jpg')}" alt="Madcow" title="Madcow" border="0" />
                 </a>
             </div>
-        </td>--%>
+        </td>
         <td style="vertical-align: middle;">
-            <div class="spinner" id="spinner" style="display:none;">
-                <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
-            </div>
+        <div class="spinner" id="spinner" style="display:none;">
+            <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
+        </div>
         </td>
     </tr>
 </table>
+--%>
 <r:layoutResources/>
 <div class="container">
     <div class="row">

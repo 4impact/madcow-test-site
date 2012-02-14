@@ -11,60 +11,59 @@
         <title><g:message code="default.search.label" args="[entityName]" /></title>                
     </head>
     <body>
-        <div class="nav" role="navigation">
-            <ul>
-            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span> </li>
-            <li><span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span></li>
-            </ul>
-        </div>               
         <div class="body">
-            <h2><g:message code="default.search.label" args="[entityName]" /></h2>
+            <ul class="breadcrumb">
+
+                <li>
+                    <g:link class="create" action="create"><g:message code="default.create.label" args="[entityName]" /></g:link>
+                </li>
+            </ul>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+            <div class="alert alert-info">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${companyInstance}">
-            <div class="errors">
+            <div class="alert alert-error">
                 <g:renderErrors bean="${companyInstance}" as="list" />
             </div>
             </g:hasErrors>
             <g:form action="showSearchResults" method="post" class="form-horizontal">
+                <legend><g:message code="default.search.label" args="[entityName]" /></legend>
                 <fieldset class="form">
-                <div class="dialog">
                     <table>
                         <tbody>
-                            <tr class="prop">
-                                <td valign="top" class="name">
+                            <tr class="control-group">
+                                <td valign="top" class="control-label">
                                     <label for="addressLines"><g:message code="address.addressLines.label" default="Address" /></label>
                                 </td>
-                                <td valign="top" class="value">
-                                    <g:textField name="addressLines"/>
+                                <td valign="top" class="controls">
+                                    <g:textField name="addressLines" class="input-xlarge"/>
                                 </td>                                                        
                             </tr>  
                             
-                            <tr class="prop">
-                                <td valign="top" class="name">
+                            <tr class="control-group">
+                                <td valign="top" class="control-label">
                                     <label for="postCode"><g:message code="address.postCode.label" default="Post Code" /></label>
                                 </td>
-                                <td valign="top" class="value">
-                                    <g:textField name="postCode"/>
+                                <td valign="top" class="controls">
+                                    <g:textField name="postCode" class="input-xlarge"/>
                                 </td>                                                        
                             </tr>
                             
-                            <tr class="prop">
-                                <td valign="top" class="name">
+                            <tr class="control-group">
+                                <td valign="top" class="control-label">
                                     <label for="suburb"><g:message code="address.suburb.label" default="Suburb" /></label>
                                 </td>
-                                <td valign="top" class="value">
-                                    <g:textField name="suburb"/>
+                                <td valign="top" class="controls">
+                                    <g:textField name="suburb" class="input-xlarge"/>
                                 </td>                                                        
                             </tr>  
                             
-                            <tr class="prop">
-                                <td valign="top" class="name">
+                            <tr class="control-group">
+                                <td valign="top" class="control-label">
                                     <label for="state"><g:message code="address.state.label" default="State" /></label>                                    
                                 </td>
-                                <td valign="top" class="value">
-                                    <g:select                                      
+                                <td valign="top" class="controls">
+                                    <g:select class="input-xlarge"
                                         from="${State.list().sort() {state -> state.name} }"
                                         value="${state}" 
                                         name="state"
@@ -76,9 +75,12 @@
                                                                                   
                         </tbody>
                     </table>
-                </div>
             <div class="form-actions">
-                <input class="btn btn-primary" type="submit" value="${message(code: 'default.button.search.label', default: 'Search')}" />
+                <button type="submit" class="btn btn-primary">
+                    <i class="icon-search icon-white">
+                    </i>
+                    ${message(code: 'default.button.search.label', default: 'Search')}
+                </button>
                 <button type="reset" class="btn">Cancel</button>
             </div>
             </fieldset>

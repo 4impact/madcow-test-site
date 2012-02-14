@@ -58,10 +58,10 @@
         <div class="body">
             <h2><g:message code="default.create.label" args="[entityName]" /></h2>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+            <div class="alert alert-info">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${addressInstance}">
-            <div class="errors">
+            <div class="alert alert-error">
                 <g:renderErrors bean="${addressInstance}" as="list" />
             </div>
             </g:hasErrors>

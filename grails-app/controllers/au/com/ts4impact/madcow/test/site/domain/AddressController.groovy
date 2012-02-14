@@ -126,7 +126,7 @@ class AddressController {
         def addressInstance = Address.get(params.id)
         if (!addressInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'address.label', default: 'Address'), params.id])}"
-            redirect(action: "list")
+            redirect(action: "show")
         }
         else {
             return [addressInstance: addressInstance]
@@ -163,26 +163,30 @@ class AddressController {
         }
         else {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'address.label', default: 'Address'), params.id])}"
-            redirect(action: "list")
+            redirect(action: "show")
         }
     }
 
     def delete = {
+        //println "deleting address "+params.id;
+        
         def addressInstance = Address.get(params.id)
         if (addressInstance) {
+            //println "address instance is not null"
             try {
                 addressInstance.delete(flush: true)
                 flash.message = "${message(code: 'default.deleted.message', args: [message(code: 'address.label', default: 'Address'), params.id])}"
-                redirect(action: "list")
+                redirect(action: "search")
             }
             catch (org.springframework.dao.DataIntegrityViolationException e) {
                 flash.message = "${message(code: 'default.not.deleted.message', args: [message(code: 'address.label', default: 'Address'), params.id])}"
-                redirect(action: "show", id: params.id)
+                redirect(action: "search", id: params.id)
             }
         }
         else {
+            //println "address instance is null"
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'address.label', default: 'Address'), params.id])}"
-            redirect(action: "list")
+            redirect(action: "search")
         }
     }
 }

@@ -8,22 +8,25 @@
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link></span>
-            <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
-        </div>
         <div class="body">
-            <h2><g:message code="default.show.label" args="[entityName]" /></h2>
+        <ul class="breadcrumb">
+            <li>
+                <g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link> <span class="divider">|</span>
+            </li>
+            <li>
+                <g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+            </li>
+        </ul>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+                <div class="alert alert-info">${flash.message}</div>
             </g:if>
-            <div class="dialog">
+            <form class="form-horizontal">
+                <legend><g:message code="default.show.label" args="[entityName]" /></legend>
                 <table>
                     <tbody>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="address.id.label" default="Id" /></td>
+                            <td valign="top" class="name"><g:message code="address.id.label" default="ID" /></td>
                             
                             <td valign="top" class="value" id="addressId">${fieldValue(bean: addressInstance, field: "id")}</td>
                             
@@ -72,14 +75,16 @@
                     
                     </tbody>
                 </table>
-            </div>
-            <div class="buttons">
-                <g:form>
+            </form>
+            <div class="form-actions">
+                <g:form class="form-horizontal" controller="Address" action="delete">
                     <g:hiddenField name="id" value="${addressInstance?.id}" />
-                    <span class="button"><g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" /></span>
-                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+                    <g:actionSubmit class="btn btn-primary" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" />
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
+                        <i class="icon-trash icon-white"></i>
+                        Delete
+                    </button>
                 </g:form>
-            </div>
         </div>
     </body>
 </html>
