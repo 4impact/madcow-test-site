@@ -74,6 +74,26 @@ class AddressController {
                     }
                 }
             }
+            if (params.order){
+                if ("${params.sort}".contains('postCode.state'))
+                {
+                    postCode {
+                        state {
+                            order ("longName","${params.order}")
+                        }
+                    }
+                }else if ("${params.sort}".contains('postCode.locality'))
+                {
+                    postCode {
+                        order ("locality","${params.order}")
+                    }
+                }else{
+                    order ("${params.sort}","${params.order}")
+                }
+            }
+
+            //println "sort: ${params.sort}"
+            //println "order: ${params.order}"
         }
 
         params.totalAddresses = searchResults.totalCount

@@ -76,13 +76,6 @@
         
     </head>
     <body>
-    <%--
-    <div class="nav" role="navigation">
-        <ul>
-            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
-            <li><span class="menuButton"><g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link></span></li>
-        </ul>
-    </div>--%>
         <div class="body">
             <ul class="breadcrumb">
 
@@ -91,7 +84,7 @@
                 </li>
             </ul>
             <g:if test="${flash.message}">
-            <div class="alert alert-info">${flash.message}</div>
+                <div class="alert alert-info"><a class="close" data-dismiss="alert" href="#">×</a>${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${addressInstance}">
             <div class="alert alert-error">

@@ -18,7 +18,7 @@
             </li>
         </ul>
             <g:if test="${flash.message}">
-                <div class="alert alert-info">${flash.message}</div>
+                <div class="alert alert-info"><a class="close" data-dismiss="alert" href="#">×</a>${flash.message}</div>
             </g:if>
             <form class="form-horizontal">
                 <legend><g:message code="default.show.label" args="[entityName]" /></legend>
@@ -33,14 +33,14 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="address.addressLine1.label" default="Address Line1" /></td>
+                            <td valign="top" class="name"><g:message code="address.addressLine1.label" default="Address Line 1" /></td>
                             
                             <td valign="top" class="value" id="addressLine1">${fieldValue(bean: addressInstance, field: "addressLine1")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="address.addressLine2.label" default="Address Line2" /></td>
+                            <td valign="top" class="name"><g:message code="address.addressLine2.label" default="Address Line 2" /></td>
                             
                             <td valign="top" class="value" id="addressLine2">${fieldValue(bean: addressInstance, field: "addressLine2")}</td>
                             

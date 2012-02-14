@@ -19,7 +19,7 @@
                 </li>
             </ul>
             <g:if test="${flash.message}">
-            <div class="alert alert-info">${flash.message}</div>
+                <div class="alert alert-info"><a class="close" data-dismiss="alert" href="#">×</a>${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${companyInstance}">
             <div class="alert alert-error">

@@ -28,19 +28,17 @@
                     <thead>
                         <tr>
                             <g:sortableColumn property="id" title="ID" params="${params}"/>
-                   	        <g:sortableColumn property="addressLine1" title="Address Line 1" params="${params}"/>                        
-                            <g:sortableColumn property="addressLine2" title="Address Line 2" params="${params}"/>                        
+                   	        <g:sortableColumn property="addressLine1" title="Address Line" params="${params}"/>
                    	        <g:sortableColumn property="postCode.locality" title="Suburb" params="${params}"/>
                    	        <g:sortableColumn property="postCode.state" title="State" params="${params}"/>
-                   	        <g:sortableColumn property="postCode.postCode" title="Post Code" params="${params}"/>
+                   	        <g:sortableColumn property="postCode" title="Post Code" params="${params}"/>
                         </tr>
                     </thead>
                     <tbody>
                     <g:each in="${addressInstanceList}" status="i" var="addressInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                             <td><g:link action="show" id="${addressInstance.id}">${addressInstance.id}</g:link></td>                        
-                            <td>${fieldValue(bean:addressInstance, field:'addressLine1')}</td>                        
-                            <td>${fieldValue(bean:addressInstance, field:'addressLine2')}</td>                       
+                            <td>${fieldValue(bean:addressInstance, field:'addressLine1')} ${fieldValue(bean:addressInstance, field:'addressLine2')}</td>
                             <td>${fieldValue(bean:addressInstance, field:'postCode.locality')}</td>
                             <td>${fieldValue(bean:addressInstance, field:'postCode.state.name')}</td>                        
                             <td>${fieldValue(bean:addressInstance, field:'postCode.postCode')}</td>                        

@@ -5,6 +5,12 @@
                 <img src="${resource(dir:'images',file:'Address-Book_48x48.png')}" height="22" width="22"/> Address Book
             </a>
 
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
             <ul class="nav">
                 <li class="active">
                     <a href="#">Home</a>
