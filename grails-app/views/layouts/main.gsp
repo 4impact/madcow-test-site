@@ -18,6 +18,11 @@
     <r:require modules="bootstrap"/>
     <g:javascript library="jquery" />
     <style type="text/css">
+        @media screen,print {
+            body {
+                padding-top: 40px;
+            }
+        }
 
         .body {
             padding-top: 10px;
@@ -31,16 +36,17 @@
     </g:javascript>
     <r:layoutResources/>
 </head>
-<body style="padding-top: 40px;">
+<body>
 <g:render template="/layouts/navigation"/>
 <div class="container">
             <g:layoutBody />
             <r:layoutResources/>
-</div>
+
 <div id="footer" style="border: 0px; margin-top: 10px; margin-right: 10px; float: right">
     <a href="http://4impact.com.au">
         <img src="${resource(dir:'images',file:'4impact.jpg')}" alt="Madcow" title="Madcow" border="0" />
     </a>
+</div>
 </div>
 </body>
 </html>

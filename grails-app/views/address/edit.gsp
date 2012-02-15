@@ -151,15 +151,15 @@
                         </tbody>
                         <tr class="prop">
                             <td valign="top" class="name">
-                                <g:submitToRemote class="btn btn-info"
-                                    name="checkForDuplicates"
-                                    value="${message(code: 'address.create.button.CheckForDuplicates', default: 'Check For Duplicates')}"
-                                    controller="address"
-                                    action="ajaxCheckForDuplicates"
-                                    onLoading="showSpinner(true);"
-                                    onComplete="showNumberOfDuplicates(XMLHttpRequest); showSpinner(false);"/>
                             </td>
                             <td valign="top">
+                                <g:submitToRemote class="btn btn-info"
+                                                  name="checkForDuplicates"
+                                                  value="${message(code: 'address.create.button.CheckForDuplicates', default: 'Check For Duplicates')}"
+                                                  controller="address"
+                                                  action="ajaxCheckForDuplicates"
+                                                  onLoading="showSpinner(true);"
+                                                  onComplete="showNumberOfDuplicates(XMLHttpRequest); showSpinner(false);"/>
                                 <div class="spinner" id="spinner" style="display:none;">
                                     <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
                                 </div>

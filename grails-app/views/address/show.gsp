@@ -8,7 +8,7 @@
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
-        <div class="body">
+    <div class="body">
         <ul class="breadcrumb">
             <li>
                 <g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link> <span class="divider">|</span>
@@ -76,14 +76,15 @@
                     </tbody>
                 </table>
             </form>
-            <div class="form-actions">
                 <g:form class="form-horizontal" controller="Address" action="delete">
-                    <g:hiddenField name="id" value="${addressInstance?.id}" />
-                    <g:actionSubmit class="btn btn-primary" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" />
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-                        <i class="icon-trash icon-white"></i>
-                        Delete
-                    </button>
+                    <div class="form-actions">
+                        <g:hiddenField class="" name="id" value="${addressInstance?.id}" />
+                        <g:actionSubmit class="btn btn-primary" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" />
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
+                            <i class="icon-trash icon-white"></i>
+                            Delete
+                        </button>
+                    </div>
                 </g:form>
         </div>
     </body>

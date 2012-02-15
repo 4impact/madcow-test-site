@@ -9,27 +9,22 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-    <div class="nav" role="navigation">
-        <ul>
-            <li>
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            </li>
-            <li>
-            <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
-            </li>
-        </ul>
-        </div>
         <div class="body">
-            <h2><g:message code="default.create.label" args="[entityName]" /></h2>
+            <ul class="breadcrumb">
+                <li>
+                    <g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link>
+                </li>
+            </ul>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+                <div class="alert alert-info"><a class="close" data-dismiss="alert" href="#">×</a>${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${stateInstance}">
-            <div class="errors">
+            <div class="alert alert-error">
                 <g:renderErrors bean="${stateInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="save" >
+            <g:form action="save" class="form form-horizontal" >
+                <legend><g:message code="default.create.label" args="[entityName]" /></legend>
                 <div class="dialog">
                     <table>
                         <tbody>
@@ -55,8 +50,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="buttons">
-                    <span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>
+                <div class="form-actions">
+                    <g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </div>
             </g:form>
         </div>

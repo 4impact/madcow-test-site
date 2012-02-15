@@ -76,13 +76,6 @@
         
     </head>
     <body>
-    <%--
-    <div class="nav" role="navigation">
-        <ul>
-            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
-            <li><span class="menuButton"><g:link class="list" action="search"><g:message code="default.search.label" args="[entityName]" /></g:link></span></li>
-        </ul>
-    </div>--%>
         <div class="body">
             <ul class="breadcrumb">
                 <li>

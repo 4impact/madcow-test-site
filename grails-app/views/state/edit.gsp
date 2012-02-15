@@ -9,24 +9,25 @@
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
-    <div class="nav" role="navigation">
-        <ul>
-            <li><span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span></li>
-            <li><span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span></li>
-            <li><span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span></li>
-        </ul>
-        </div>
         <div class="body">
-            <h2><g:message code="default.edit.label" args="[entityName]" /></h2>
+            <ul class="breadcrumb">
+                <li>
+                    <g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link> <span class="divider">|</span>
+                </li>
+                <li>
+                    <g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+                </li>
+            </ul>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+                <div class="alert alert-info"><a class="close" data-dismiss="alert" href="#">×</a>${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${stateInstance}">
-            <div class="errors">
+            <div class="alert alert-error">
                 <g:renderErrors bean="${stateInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form method="post" >
+            <g:form method="post" class="form form-horizontal">
+                <legend><g:message code="default.edit.label" args="[entityName]" /></legend>
                 <g:hiddenField name="id" value="${stateInstance?.id}" />
                 <g:hiddenField name="version" value="${stateInstance?.version}" />
                 <div class="dialog">
@@ -35,7 +36,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="name"><g:message code="state.shortName.label" default="Short Name" /></label>
+                                    <label for="shortName"><g:message code="state.shortName.label" default="Short Name" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: stateInstance, field: 'shortName', 'errors')}">
                                     <g:textField name="shortName" value="${stateInstance?.shortName}" />
@@ -44,7 +45,7 @@
                             
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="name"><g:message code="state.longName.label" default="Long Name" /></label>
+                                    <label for="longName"><g:message code="state.longName.label" default="Long Name" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: stateInstance, field: 'longName', 'errors')}">
                                     <g:textField name="longName" value="${stateInstance?.longName}" />
@@ -53,9 +54,15 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="buttons">
-                    <span class="button"><g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" /></span>
-                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+                <div class="form-actions">
+                    <span class="button"><g:actionSubmit class="btn btn-primary" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" /></span>
+                    <g:form action="delete" controller="State">
+                        <button class="btn btn-danger" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" >
+                            <i class="icon-trash icon-white"></i>
+                            Delete
+                        </button>
+                        <g:hiddenField name="id" value="${stateInstance?.id}" />
+                    </g:form>
                 </div>
             </g:form>
         </div>

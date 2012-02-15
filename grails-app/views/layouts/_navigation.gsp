@@ -11,49 +11,54 @@
                 <span class="icon-bar"></span>
             </a>
 
-            <ul class="nav">
-                <li class="active">
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <g:link controller="Address" action="create">Create Address</g:link>
-                </li>
-                <li>
-                    <g:link controller="Address" action="search">Search</g:link>
-                </li>
-                <li class="divider-vertical">
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li <g:if test="${params.action == 'create' && params.controller == 'address'}">
+                        class="active"
+                        </g:if>
+                    >
+                        <g:link controller="Address" action="create">Create Address</g:link>
+                    </li>
+                    <li <g:if test="${(params.action == 'search' || params.action == 'showSearchResults') && params.controller == 'address'}">
+                            class="active"
+                        </g:if>
+                    >
+                        <g:link controller="Address" action="search">Search</g:link>
+                    </li>
+                    <li class="divider-vertical">
 
-                </li>
-                <li>
-                    <a href="http://www.projectmadcow.com">Project Madcow</a>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <a href="http://www.projectmadcow.com">Project Madcow</a>
+                    </li>
+                </ul>
 
-            <ul class="nav pull-right">
-                <li class="dropdown">
-                    <a href="#"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        Admin
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <g:link controller="PostCodeReference" action="create">Create Post Code</g:link>
-                        </li>
-                        <li>
-                            <g:link controller="PostCodeReference" action="list">View Post Codes</g:link>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <g:link controller="State" action="create">Create State</g:link>
-                        </li>
-                        <li>
-                            <g:link controller="State" action="list">View States</g:link>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a href="#"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            Admin
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <g:link controller="PostCodeReference" action="create">Create Post Code</g:link>
+                            </li>
+                            <li>
+                                <g:link controller="PostCodeReference" action="list">View Post Codes</g:link>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <g:link controller="State" action="create">Create State</g:link>
+                            </li>
+                            <li>
+                                <g:link controller="State" action="list">View States</g:link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
