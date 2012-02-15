@@ -32,37 +32,37 @@
                     <table>
                         <tbody>
                             <tr class="control-group">
-                                <td valign="top" class="control-label">
+                                <td class="control-label">
                                     <label for="addressLines"><g:message code="address.addressLines.label" default="Address" /></label>
                                 </td>
-                                <td valign="top" class="controls">
+                                <td class="controls">
                                     <g:textField name="addressLines" class="input-xlarge"/>
                                 </td>                                                        
                             </tr>  
                             
                             <tr class="control-group">
-                                <td valign="top" class="control-label">
+                                <td class="control-label">
                                     <label for="postCode"><g:message code="address.postCode.label" default="Post Code" /></label>
                                 </td>
-                                <td valign="top" class="controls">
+                                <td class="controls">
                                     <g:textField name="postCode" class="input-xlarge"/>
                                 </td>                                                        
                             </tr>
                             
                             <tr class="control-group">
-                                <td valign="top" class="control-label">
+                                <td class="control-label">
                                     <label for="suburb"><g:message code="address.suburb.label" default="Suburb" /></label>
                                 </td>
-                                <td valign="top" class="controls">
+                                <td class="controls">
                                     <g:textField name="suburb" class="input-xlarge"/>
                                 </td>                                                        
                             </tr>  
                             
                             <tr class="control-group">
-                                <td valign="top" class="control-label">
+                                <td class="control-label">
                                     <label for="state"><g:message code="address.state.label" default="State" /></label>                                    
                                 </td>
-                                <td valign="top" class="controls">
+                                <td class="controls">
                                     <g:select class="input-xlarge"
                                         from="${State.list().sort() {state -> state.name} }"
                                         value="${state}" 

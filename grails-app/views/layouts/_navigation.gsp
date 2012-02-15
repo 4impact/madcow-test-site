@@ -21,10 +21,12 @@
                 <li>
                     <g:link controller="Address" action="search">Search</g:link>
                 </li>
+                <li class="divider-vertical">
+
+                </li>
                 <li>
                     <a href="http://www.projectmadcow.com">Project Madcow</a>
                 </li>
-                <li class="divider-vertical"></li>
             </ul>
 
             <ul class="nav pull-right">
