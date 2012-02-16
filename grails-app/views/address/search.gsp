@@ -28,53 +28,41 @@
             </g:hasErrors>
             <g:form action="showSearchResults" method="post" class="form-horizontal">
                 <legend><g:message code="default.search.label" args="[entityName]" /></legend>
-                <fieldset class="form">
-                    <table>
-                        <tbody>
-                            <tr class="control-group">
-                                <td class="control-label">
-                                    <label for="addressLines"><g:message code="address.addressLines.label" default="Address" /></label>
-                                </td>
-                                <td class="controls">
-                                    <g:textField name="addressLines" class="input-xlarge"/>
-                                </td>                                                        
-                            </tr>  
+                <fieldset>
+                            <div class="control-group">
+                                <label for="addressLines" class="control-label"><g:message code="address.addressLines.label" default="Address" /></label>
+                                <div class="controls">
+                                    <g:textField name="addressLines" class="input-large"/>
+                                </div>
+                            </div>
                             
-                            <tr class="control-group">
-                                <td class="control-label">
-                                    <label for="postCode"><g:message code="address.postCode.label" default="Post Code" /></label>
-                                </td>
-                                <td class="controls">
-                                    <g:textField name="postCode" class="input-xlarge"/>
-                                </td>                                                        
-                            </tr>
+                            <div class="control-group">
+                                <label for="postCode" class="control-label"><g:message code="address.postCode.label" default="Post Code" /></label>
+                                <div class="controls">
+                                    <g:textField name="postCode" class="input-large"/>
+                                </div>
+                            </div>
                             
-                            <tr class="control-group">
-                                <td class="control-label">
-                                    <label for="suburb"><g:message code="address.suburb.label" default="Suburb" /></label>
-                                </td>
-                                <td class="controls">
-                                    <g:textField name="suburb" class="input-xlarge"/>
-                                </td>                                                        
-                            </tr>  
+                            <div class="control-group">
+                                <label for="suburb" class="control-label"><g:message code="address.suburb.label" default="Suburb" /></label>
+                                <div class="controls">
+                                    <g:textField name="suburb" class="input-large"/>
+                                </div>
+                            </div>
                             
-                            <tr class="control-group">
-                                <td class="control-label">
-                                    <label for="state"><g:message code="address.state.label" default="State" /></label>                                    
-                                </td>
-                                <td class="controls">
-                                    <g:select class="input-xlarge"
+                            <div class="control-group">
+                                <label for="state" class="control-label"><g:message code="address.state.label" default="State" /></label>
+                                <div class="controls">
+                                    <g:select class="input-large"
                                         from="${State.list().sort() {state -> state.name} }"
                                         value="${state}" 
                                         name="state"
                                         optionKey="id"
                                         optionValue="name"
                                         noSelection="${['':'Select One...']}"/>
-                                </td>
-                            </tr> 
-                                                                                  
-                        </tbody>
-                    </table>
+                                </div>
+                            </div>
+
             <div class="form-actions">
                 <button type="submit" class="btn btn-primary">
                     <i class="icon-search icon-white">

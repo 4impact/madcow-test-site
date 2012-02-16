@@ -65,6 +65,9 @@ class PostCodeReferenceController {
                     return
                 }
             }
+            println "update params: ${params}"
+            def stateInstance = State.get(params."state.id");
+            params.put("State",stateInstance)
             postCodeReferenceInstance.properties = params
             if (!postCodeReferenceInstance.hasErrors() && postCodeReferenceInstance.save(flush: true)) {
                 flash.message = "${message(code: 'default.updated.message', args: [message(code: 'postCodeReference.label', default: 'PostCodeReference'), postCodeReferenceInstance.id])}"

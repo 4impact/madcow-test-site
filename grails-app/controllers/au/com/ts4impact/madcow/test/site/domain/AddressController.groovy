@@ -14,7 +14,16 @@ class AddressController {
     def search = {
     }
 
-    def searchTableLayout = {
+    def searchAutoComplete = {
+    }
+
+    def ajaxGetSuburbNames = {
+        def postCodes = PostCodeReference.findAllByLocalityLike("${params.id}%" , [max:8,
+                                                                                    offset:0,
+                                                                                    sort:"locality",
+                                                                                    order:"asc"])
+        println "ajaxGetSuburbNames for locality : ${params.id} -> postCodes : $postCodes"
+        render postCodes as JSON
     }
 
     def ajaxGetSuburbs = {
@@ -47,6 +56,13 @@ class AddressController {
     def showSearchResults = {
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
         params.offset = params?.offset?.toInteger() ?: 0
+        
+        //if state long name is set then use it (for autocomplete page)
+        if (params.stateLongName)
+        {
+            //println "trying to reset value"
+            params.state = State.findByLongName(params.stateLongName).id;
+        }
 
         def searchResults = Address.createCriteria().list(max: params.max, offset: params.offset) {
             or {

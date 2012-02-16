@@ -29,7 +29,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy" line="160" class="au.com.ts4impact.madcow.test.site.domain.AddressController" package="">
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy" line="176" class="au.com.ts4impact.madcow.test.site.domain.AddressController" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -42,7 +42,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy" line="192" class="au.com.ts4impact.madcow.test.site.domain.AddressController" package="">
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy" line="208" class="au.com.ts4impact.madcow.test.site.domain.AddressController" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -96,10 +96,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_navigation.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_navigation.gsp">
+      <file leaf-file-name="searchAutoComplete.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/address/searchAutoComplete.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="32" selection-start="599" selection-end="599" vertical-scroll-proportion="0.34146342">
+            <state line="146" column="57" selection-start="6775" selection-end="6775" vertical-scroll-proportion="-0.7446808">
+              <folding>
+                <marker date="1329367657000" expanded="true" signature="671:1416" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="775:1371" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="828:1001" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="921:938" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="939:944" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1066:1240" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="1158:1175" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1178:1183" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1327:1344" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1347:1352" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1473:1897" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="1522:1629" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="1605:1610" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1690:1798" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="1774:1779" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1877:1882" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="1941:3602" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="1943:2015" placeholder="//..." />
+                <marker date="1329367657000" expanded="true" signature="2070:2073" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="2259:3588" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="2423:3203" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="2449:2531" placeholder="//..." />
+                <marker date="1329367657000" expanded="true" signature="2591:2784" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="2692:2713" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="2714:2719" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="2861:3055" placeholder="{...}" />
+                <marker date="1329367657000" expanded="true" signature="2961:2982" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="2985:2990" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="3150:3171" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="3174:3179" placeholder="..." />
+                <marker date="1329367657000" expanded="true" signature="3224:3327" placeholder="//..." />
+                <marker date="1329367657000" expanded="true" signature="3401:3570" placeholder="//..." />
+                <marker date="1329367657000" expanded="true" signature="3603:8931" placeholder="&lt;xml/&gt;" />
+                <marker date="1329367657000" expanded="true" signature="3608:8931" placeholder="&lt;xml/&gt;" />
+                <marker date="1329367657000" expanded="true" signature="3624:8920" placeholder="&lt;xml/&gt;" />
+                <marker date="1329367657000" expanded="true" signature="3640:8901" placeholder="&lt;xml/&gt;" />
+                <marker date="1329367657000" expanded="true" signature="3682:3897" placeholder="&lt;xml/&gt;" />
+                <marker date="1329367657000" expanded="true" signature="3723:3879" placeholder="&lt;xml/&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-typeahead.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.grails/2.0.0/projects/madcow-test-site-2/plugins/twitter-bootstrap-2.0.0.16/web-app/js/bootstrap-typeahead.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="10" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,9 +156,30 @@
       <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/address/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="122" selection-start="4115" selection-end="4183" vertical-scroll-proportion="-8.106383">
+            <state line="31" column="51" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-4.787234">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddressController.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="71" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.15423729">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostCodeReference.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/au/com/ts4impact/madcow/test/site/domain/PostCodeReference.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.6666667">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -129,10 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/address/search.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/address/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/PostCodeReferenceController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/address/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/address/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/state/show.gsp" />
@@ -141,10 +206,14 @@
         <option value="$PROJECT_DIR$/grails-app/views/postCodeReference/list.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/state/list.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/state/edit.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/postCodeReference/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/postCodeReference/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/_navigation.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/PostCodeReferenceController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/postCodeReference/edit.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/address/search.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/address/searchAutoComplete.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy" />
       </list>
     </option>
   </component>
@@ -410,7 +479,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13092783" sideWeight="0.6709486" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.6709486" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15257733" sideWeight="0.6709486" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -483,80 +552,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/PostCodeReferenceController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="77" selection-start="413" selection-end="413" vertical-scroll-proportion="-7.826087">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="30" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.26190478">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/address/showSearchResults.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="1235" selection-end="1269" vertical-scroll-proportion="-2.4255319">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/address/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="39" selection-start="3284" selection-end="3284" vertical-scroll-proportion="-5.425532">
-          <folding>
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1329277203000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/address/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="24" selection-start="4673" selection-end="5210" vertical-scroll-proportion="-25.531916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/state/list.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.4814189">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/state/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="704" selection-end="825" vertical-scroll-proportion="0.4560811">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/postCodeReference/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="41" selection-start="983" selection-end="983" vertical-scroll-proportion="0.5067568">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/postCodeReference/list.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="858" selection-end="858" vertical-scroll-proportion="0.5320946">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/state/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="41" selection-start="2617" selection-end="2703" vertical-scroll-proportion="-7.1702127">
@@ -567,13 +562,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/views/state/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="438" selection-end="859" vertical-scroll-proportion="-3.8297873">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/postCodeReference/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="83" selection-start="1460" selection-end="1460" vertical-scroll-proportion="-9.25532">
           <folding />
         </state>
       </provider>
@@ -594,16 +582,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/address/create.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_navigation.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="122" selection-start="4115" selection-end="4183" vertical-scroll-proportion="-8.106383">
+        <state line="14" column="32" selection-start="599" selection-end="599" vertical-scroll-proportion="-8.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/_navigation.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/PostCodeReferenceController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="599" selection-end="599" vertical-scroll-proportion="0.34146342">
+        <state line="56" column="8" selection-start="2223" selection-end="2296" vertical-scroll-proportion="-8.913043">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/postCodeReference/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="25" selection-start="4552" selection-end="4552" vertical-scroll-proportion="-14.510638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/addressV2/searchTableLayout.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.936171">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../grails/grails-2.0/src/grails-plugin-gsp-2.0.0-sources.jar!/org/codehaus/groovy/grails/plugins/web/taglib/FormTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="12" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.33225283">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar!/java/util/List.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="22" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.8389571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/au/com/ts4impact/madcow/test/site/domain/PostCodeReference.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.6666667">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/address/search.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="32" selection-start="1233" selection-end="1233" vertical-scroll-proportion="-0.41322315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/address/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="51" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-4.787234">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.grails/2.0.0/projects/madcow-test-site-2/plugins/twitter-bootstrap-2.0.0.16/web-app/js/bootstrap-typeahead.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="10" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/address/searchAutoComplete.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="57" selection-start="6775" selection-end="6775" vertical-scroll-proportion="-0.7446808">
+          <folding>
+            <marker date="1329367657000" expanded="true" signature="671:1416" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="775:1371" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="828:1001" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="921:938" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="939:944" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1066:1240" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="1158:1175" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1178:1183" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1327:1344" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1347:1352" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1473:1897" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="1522:1629" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="1605:1610" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1690:1798" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="1774:1779" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1877:1882" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="1941:3602" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="1943:2015" placeholder="//..." />
+            <marker date="1329367657000" expanded="true" signature="2070:2073" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="2259:3588" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="2423:3203" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="2449:2531" placeholder="//..." />
+            <marker date="1329367657000" expanded="true" signature="2591:2784" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="2692:2713" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="2714:2719" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="2861:3055" placeholder="{...}" />
+            <marker date="1329367657000" expanded="true" signature="2961:2982" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="2985:2990" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="3150:3171" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="3174:3179" placeholder="..." />
+            <marker date="1329367657000" expanded="true" signature="3224:3327" placeholder="//..." />
+            <marker date="1329367657000" expanded="true" signature="3401:3570" placeholder="//..." />
+            <marker date="1329367657000" expanded="true" signature="3603:8931" placeholder="&lt;xml/&gt;" />
+            <marker date="1329367657000" expanded="true" signature="3608:8931" placeholder="&lt;xml/&gt;" />
+            <marker date="1329367657000" expanded="true" signature="3624:8920" placeholder="&lt;xml/&gt;" />
+            <marker date="1329367657000" expanded="true" signature="3640:8901" placeholder="&lt;xml/&gt;" />
+            <marker date="1329367657000" expanded="true" signature="3682:3897" placeholder="&lt;xml/&gt;" />
+            <marker date="1329367657000" expanded="true" signature="3723:3879" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/au/com/ts4impact/madcow/test/site/domain/AddressController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="71" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.15423729">
           <folding />
         </state>
       </provider>

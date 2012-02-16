@@ -54,7 +54,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="state"><g:message code="postCodeReference.state.label" default="State" /></label>
+                                  <label for="state.id"><g:message code="postCodeReference.state.label" default="State" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: postCodeReferenceInstance, field: 'state', 'errors')}">
                                     <g:select name="state.id" from="${au.com.ts4impact.madcow.test.site.domain.State.list()}" optionKey="id" value="${postCodeReferenceInstance?.state?.id}"  />
